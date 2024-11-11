@@ -1,0 +1,122 @@
+header {
+  background-color: #c7bebb; /* Neutral, earthy background color */
+  padding: 20px;
+  box-shadow: 0px 2px 10px rgba(14, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px; /* Limit max width */
+  margin: 0 auto; /* Center the content */
+  position: relative;
+}
+
+header .logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #000000;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+header .nav-links {
+  display: flex;
+  list-style: none;
+  transition: all 0.3s ease-in-out;
+}
+
+header .nav-links li {
+  margin-left: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+header .nav-links li a {
+  text-decoration: none;
+  color: #000;
+}
+
+header .nav-links li:hover {
+  color: #ec6b5a; /* Color on hover */
+}
+
+header .nav-links li.active {
+  font-weight: bold;
+  color: #6b2e2e; /* Example active state color */
+}
+
+/* Hamburger Menu Styles */
+.toggle-button {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 18px;
+  position: relative;
+}
+
+.hamburger-icon .line {
+  background-color: #000;
+  height: 3px;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.hamburger-icon.active .line:nth-child(1) {
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+}
+
+.hamburger-icon.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.active .line:nth-child(3) {
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 0;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header .logo {
+    margin-bottom: 20px;
+  }
+
+  header .nav-links {
+    flex-direction: column;
+    padding-left: 0;
+    display: none;
+    width: 100%;
+    background-color: #c7bebb;
+    padding: 10px;
+  }
+
+  header .nav-links.active {
+    display: block;
+  }
+
+  .toggle-button {
+    display: block;
+  }
+
+  header .nav-links li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+}
