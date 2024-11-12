@@ -1,0 +1,48 @@
+
+
+
+/* src/components/Navbar.css */
+header {
+    background-color: #333;
+    padding: 15px 0;
+    position: fixed; /* Keeps the navbar fixed at the top */
+    width: 95.9%;
+    top: 0;
+    left: 10;
+    z-index: 100; /* Ensures the navbar stays on top of other content */
+  }
+  
+  nav .logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 5px;
+  }
+  
+  .nav-links {
+    list-style-type: none;
+    padding: 1;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+  
+  .nav-links a {
+    color: rgb(17, 0, 0);
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .nav-links li.active a {
+    color: #f0a500; /* Highlight active link */
+    font-weight: bold;
+  }
+  
+  .nav-links a:hover {
+    color: #f0a500; /* Color change on hover */
+  }
+  
