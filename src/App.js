@@ -12,6 +12,9 @@ import Gallery from "./Pages/Gallery";
 import './App.css';
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
+import HeroSection from './Components/HeroSection'; 
+import HomeSection from  './Components/HomeSection1';
+
 
 
 
@@ -21,6 +24,9 @@ function App() {
     
       
       <Header />
+  <HeroSection/>
+  <HomeSection/>
+  
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />

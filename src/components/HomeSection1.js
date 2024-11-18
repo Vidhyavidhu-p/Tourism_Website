@@ -1,6 +1,7 @@
-
 import React from 'react';
 import './CSS/HomeSection1.css';
+import image2 from '../Assets/images-2.jpeg';  // import image2
+import image3 from '../Assets/images-3.jpeg';  // import image3
 
 function HomeSection1() {
     return (
@@ -8,10 +9,10 @@ function HomeSection1() {
             <div className="home-content">
                 <div className="home-image-outer-container">
                     <div className="home-image">
-                        <img src="image1.jpeg" alt="Explore the world - Image 1" />
+                        <img src={image2} alt="Explore the world" />
                     </div>
                     <div className="home-image">
-                        <img src="your-image-path2.jpg" alt="Explore the world - Image 2" />
+                        <img src={image3} alt="Explore the world" />
                     </div>
                 </div>
                 <div className="home-text">
