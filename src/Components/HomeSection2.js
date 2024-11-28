@@ -1,5 +1,5 @@
 import React from "react";
-import "./CSS/HomeSection2.css"; // Ensure this is the correct relative path
+import "./CSS/HomeSection2.css"; // Combined CSS for both components
 import transportation from '../Assets/transportation.webp';
 import hotel from '../Assets/hotel.webp';
 import tour from '../Assets/tour.webp';
@@ -12,7 +12,7 @@ import img4 from '../Assets/img4.webp';
 import img5 from '../Assets/img5.webp';
 
 
-const HomeSection2 = () => {
+const HomePage = () => {
   const services = [
     {
       id: 1,
@@ -42,7 +42,7 @@ const HomeSection2 = () => {
 
   return (
     <div className="homepage-container">
-      {/* HomeSection2 */}
+      {/* HomeSection3 */}
       <div className="tourism-container">
         <div className="left-section">
           <h3 className="heading">Why Choose Us</h3>
@@ -108,4 +108,4 @@ const HomeSection2 = () => {
   );
 };
 
-export default HomeSection2;
+export default HomePage;

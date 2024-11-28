@@ -1,7 +1,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import './CSS/Section1.css';
-import image1 from '../Assets/pic2.jpg';  // Adjust the path as needed
+import image1 from '../Assets/sec3.webp';  // Adjust the path as needed
 import image2 from '../Assets/sec1.webp';
 import image3 from '../Assets/sec2.webp';
 

@@ -50,11 +50,11 @@ function Header() {
                     </li>
                     <li>
                         <NavLink
-                            to="/services"
+                            to="/service"
                             className={({ isActive }) => (isActive ? "active" : "")}
                             onClick={() => setIsMenuOpen(false)}
                         >
-                            Services
+                            Service
                         </NavLink>
                     </li>
                     <li>
