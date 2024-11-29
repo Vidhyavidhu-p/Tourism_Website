@@ -1,82 +1,136 @@
-
-
-
-
+/* Home Section Container */
 .home-section {
-  border-color: #01070e;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 60px;
   background-color: #c7bebb;
   text-align: center;
+  min-height: 100vh; /* Full height */
 }
 
+/* Main Content */
 .home-content {
   display: flex;
-  flex-direction: row-reverse; /* Swaps the position of text and image container */
+  flex-direction: row-reverse; /* Swaps text and image */
   max-width: 1200px;
   align-items: center;
 }
 
+/* Image Container */
 .home-image-outer-container {
   display: flex;
   gap: 50px;
-  width: 60%; /* Set image container width to 50% */
+  width: 60%; /* Images take 60% of width */
 }
 
 .home-image img {
   width: 100%;
-  height: 100%;
+  height: auto;
   border-radius: 10px;
+  animation: zoom-in 1s ease-in-out; /* Zoom animation for images */
 }
 
+/* Text Section */
 .home-text {
   max-width: 500px;
-  margin-right: 40px; /* Moves text to the left */
-  width: 50%; /* Set text container width to 50% */
+  margin-right: 40px; /* Align text properly */
+  width: 40%;
+  animation: fade-in 1s ease-in-out; /* Fade-in for text */
 }
 
 .home-text h1 {
-  font-size: 2rem;
-  margin-block-end: 10px;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #01070e;
 }
 
 .home-text p {
   font-size: 1.2rem;
   margin-bottom: 20px;
+  color: #01070e;
 }
 
 .home-text button {
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 12px 24px;
+  font-size: 1rem;
   background-color: #9a9ea3;
-  color: rgb(0, 0, 0);
+  color: #000;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  animation: pulse 2s infinite; /* Pulse animation for the button */
 }
 
 .home-text button:hover {
   background-color: #b0c1d6;
 }
 
+/* Animations */
 
-/* Responsive adjustments */
+/* Fade-in Effect for Text */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Start from below */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Move to normal */
+  }
+}
+
+/* Slide-in Effect for Paragraph */
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-20px); /* Slide in from left */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Zoom-in Effect for Images */
+@keyframes zoom-in {
+  from {
+    transform: scale(0.9); /* Slightly smaller */
+    opacity: 0.8;
+  }
+  to {
+    transform: scale(1); /* Reset to normal size */
+    opacity: 1;
+  }
+}
+
+/* Pulse Effect for Button */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1); /* Slightly larger */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .home-content {
-      flex-direction: column;
-      text-align: center;
+    flex-direction: column;
+    text-align: center;
   }
 
   .home-text {
-      margin-right: 0;
-      margin-top: 20px;
+    margin-right: 0;
+    margin-top: 20px;
   }
 
   .home-image-outer-container,
   .home-text {
-      width: 100%; /* Set full width for small screens */
+    width: 100%;
   }
 }
-
